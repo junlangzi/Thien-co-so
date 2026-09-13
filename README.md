@@ -187,7 +187,6 @@ app/
 - [ ] Dark mode hoàn chỉnh hơn
 - [ ] Widget màn hình chính
 - [ ] Thông báo kết quả hàng ngày
-- [ ] Hỗ trợ thêm các đài khác (nếu có nhu cầu)
 
 ---
 
