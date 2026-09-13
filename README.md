@@ -1,6 +1,6 @@
 # Thiên Cơ Số
 
-> Ứng dụng Android hiện đại dành cho việc phân tích và thống kê kết quả **Xổ số Kiến thiết Miền Bắc (XSMB)**, với hệ thống tính điểm và xếp hạng 00–99 dựa trên dữ liệu lịch sử.
+> Ứng dụng Android dành cho việc phân tích và thống kê kết quả **Xổ số Kiến thiết Miền Bắc (XSMB)**, với hệ thống tính điểm và xếp hạng 00–99 dựa trên dữ liệu lịch sử.
 
 ![Platform](https://img.shields.io/badge/Platform-Android-green?logo=android)
 ![Language](https://img.shields.io/badge/Language-Kotlin-7F52FF?logo=kotlin)
