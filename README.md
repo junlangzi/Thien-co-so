@@ -13,7 +13,7 @@
 
 ## Giới thiệu
 
-**Thiên cơ số** là phiên bản Android của hệ thống phân tích thống kê, được viết hoàn toàn bằng **Kotlin + Jetpack Compose** theo kiến trúc **MVVM**. Ứng dụng giúp người dùng:
+**Thiên cơ số** là chương trình phân tích thống kê, được viết hoàn toàn bằng **Kotlin + Jetpack Compose** theo kiến trúc **MVVM**. Ứng dụng giúp người dùng:
 
 - Tính điểm và xếp hạng 100 con số (00–99) dựa trên nhiều thuật toán thống kê lịch sử.
 - Phân tích chuyên sâu kết quả XSMB (Lô gan, tần suất, đầu–đuôi…).
@@ -142,24 +142,7 @@ Tất cả thuật toán trả về **delta điểm** (cộng/trừ so với đi
 
 ---
 
-## Hướng dẫn cài đặt & chạy (dành cho developer)
 
-### Yêu cầu
-
-- Android Studio Ladybug / mới hơn
-- JDK 21
-- Android SDK 36
-- Thiết bị/emulator Android 7.0+ (API 24+)
-
-### Các bước
-
-1. Clone repository hoặc mở project.
-2. Đồng bộ Gradle (AGP 9.x).
-3. Build & Run trên thiết bị/emulator.
-
-```bash
-./gradlew assembleDebug
-```
 
 ### Cấu trúc thư mục quan trọng
 
@@ -192,7 +175,8 @@ app/
 | Xem KQXS | Bảng 27 giải + thống kê |
 | Cài đặt | Hướng dẫn + Sync |
 
-*(Bạn có thể thay thế bằng ảnh thực tế từ thư mục `demo/` của project)*
+<img src="https://raw.githubusercontent.com/junlangzi/Thien-co-so/refs/heads/main/demo/1.jpg" alt="Mành hình chính" width="30%"> <img src="https://raw.githubusercontent.com/junlangzi/Thien-co-so/refs/heads/main/demo/2.jpg" alt="Thuật toán" width="30%"> <img src="https://raw.githubusercontent.com/junlangzi/Thien-co-so/refs/heads/main/demo/3.jpg" alt="Kết quả" width="30%"> <img src="https://raw.githubusercontent.com/junlangzi/Thien-co-so/refs/heads/main/demo/4.jpg" alt="Chơi thử" width="30%"> <img src="https://raw.githubusercontent.com/junlangzi/Thien-co-so/refs/heads/main/demo/5.jpg" alt="Cài đặt" width="30%">
+
 
 ---
 
