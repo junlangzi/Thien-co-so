@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thiên Cơ Số - Phân tích & Dự đoán Xổ số</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class' }</script>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Be Vietnam Pro', system-ui, sans-serif; }
+    .btn-download {
+      background: linear-gradient(135deg, #4f46e5, #7c3aed, #db2777);
+      transition: all 0.3s ease;
+    }
+    .btn-download:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.35);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <!-- Icon Âm Dương -->
+        <div class="w-10 h-10 text-[#c25a17] cursor-pointer">
+          <!-- Thêm class hover:animate-spin -->
+          <svg viewBox="0 0 100 100" class="w-full h-full drop-shadow-sm hover:animate-spin">
+            <circle cx="50" cy="50" r="50" fill="currentColor"/>
+            <path d="M50 4 A 46 46 0 0 1 50 96 A 23 23 0 0 1 50 50 A 23 23 0 0 0 50 4" fill="#ffffff"/>
+            
+            <!-- Đã tráo đổi màu của 2 chấm dưới đây để chúng hiện lên -->
+            <circle cx="50" cy="27" r="7" fill="#ffffff"/> 
+            <circle cx="50" cy="73" r="7" fill="currentColor"/>
+          </svg>
+        </div>
+        <span class="font-semibold text-lg">Thiên Cơ Số</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <button onclick="toggleTheme()" class="w-10 h-10 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-xl">
+          <span id="theme-icon">🌙</span>
+        </button>
+        <a href="https://github.com/junlangzi/Thien-co-so/raw/main/thiencoso.apk" class="btn-download text-white px-5 py-2.5 rounded-full text-sm font-medium">
+          Tải APK
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="pt-28 pb-16 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="inline-block px-4 py-1.5 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 text-sm font-medium mb-6">
+        Ứng dụng Android • Phân tích thống kê XSMB
+      </div>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6">
+        <span class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent">
+          Thiên Cơ Số
+        </span>
+      </h1>
+      <p class="text-lg text-slate-600 dark:text-slate-300 mb-10 leading-relaxed">
+        Hệ thống tính điểm thông minh <strong>00–99</strong> dựa trên hơn 
+        <strong class="text-indigo-600 dark:text-indigo-400">7.500 ngày</strong> dữ liệu lịch sử Xổ số Miền Bắc.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://github.com/junlangzi/Thien-co-so/raw/main/thiencoso.apk" 
+           class="btn-download text-white px-8 py-4 rounded-2xl font-semibold inline-flex items-center justify-center gap-2">
+          ↓ Tải APK miễn phí
+        </a>
+        <a href="https://github.com/junlangzi/Thien-co-so" target="_blank"
+           class="px-8 py-4 rounded-2xl border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition font-medium">
+          Xem mã nguồn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  <section class="py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-10">Giao diện thực tế</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <img src="https://raw.githubusercontent.com/junlangzi/Thien-co-so/main/demo/1.jpg" class="rounded-2xl shadow-lg" alt="Demo 1">
+        <img src="https://raw.githubusercontent.com/junlangzi/Thien-co-so/main/demo/2.jpg" class="rounded-2xl shadow-lg" alt="Demo 2">
+        <img src="https://raw.githubusercontent.com/junlangzi/Thien-co-so/main/demo/3.jpg" class="rounded-2xl shadow-lg" alt="Demo 3">
+        <img src="https://raw.githubusercontent.com/junlangzi/Thien-co-so/main/demo/4.jpg" class="rounded-2xl shadow-lg" alt="Demo 4">
+        <img src="https://raw.githubusercontent.com/junlangzi/Thien-co-so/main/demo/5.jpg" class="rounded-2xl shadow-lg col-span-2 md:col-span-1" alt="Demo 5">
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-16 px-4 bg-white dark:bg-slate-900">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Tính năng nổi bật</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+          <div class="text-3xl mb-3">🎯</div>
+          <h3 class="text-xl font-semibold mb-2">Bảng xếp hạng điểm</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">Hệ thống tính điểm 00–99 thông minh với Top 3 Golden Picks.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+          <div class="text-3xl mb-3">⚙️</div>
+          <h3 class="text-xl font-semibold mb-2">4 Thuật toán lõi</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">Tần suất, Lô gan, Phạt vị trí giải, Thưởng số chưa về.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+          <div class="text-3xl mb-3">📊</div>
+          <h3 class="text-xl font-semibold mb-2">Backtest hiệu suất</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">Kiểm tra độ chính xác trên dữ liệu thực tế nhiều ngày.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+          <div class="text-3xl mb-3">📈</div>
+          <h3 class="text-xl font-semibold mb-2">Thống kê chuyên sâu</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">Lô gan, tần suất, đầu đuôi, bảng 27 giải đầy đủ.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+          <div class="text-3xl mb-3">🔄</div>
+          <h3 class="text-xl font-semibold mb-2">Đồng bộ dữ liệu</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">Hơn 7.500 ngày dữ liệu, tự động cập nhật mới nhất.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+          <div class="text-3xl mb-3">🎮</div>
+          <h3 class="text-xl font-semibold mb-2">Giả lập đặt cược</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">Chơi thử chiến lược mà không tốn tiền thật.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 px-4">
+    <div class="max-w-2xl mx-auto text-center bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950 dark:to-purple-950 rounded-3xl p-10 border border-indigo-100 dark:border-indigo-900">
+      <h2 class="text-3xl font-bold mb-4">Sẵn sàng khám phá?</h2>
+      <p class="text-slate-600 dark:text-slate-300 mb-8">Tải ngay ứng dụng và trải nghiệm hệ thống phân tích chuyên sâu.</p>
+      <a href="https://github.com/junlangzi/Thien-co-so/raw/main/thiencoso.apk" class="btn-download inline-flex text-white px-8 py-4 rounded-2xl font-semibold">
+        Tải APK ngay
+      </a>
+    </div>
+  </section>
+
+  <footer class="py-8 text-center text-sm text-slate-500 border-t border-slate-200 dark:border-slate-800">
+    <p>Ứng dụng mang tính chất phân tích thống kê & giải trí. Chơi có trách nhiệm.</p>
+    <p class="mt-2">Phát triển bởi <a href="https://github.com/junlangzi" class="text-indigo-600 dark:text-indigo-400">junlangzi</a></p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark');
+      const isDark = document.documentElement.classList.contains('dark');
+      document.getElementById('theme-icon').textContent = isDark ? '☀️' : '🌙';
+
+      try {
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      } catch (e) {
+        // Bỏ qua nếu bị chặn (sandbox)
+      }
+    }
+
+    // Khôi phục theme an toàn
+    try {
+      if (localStorage.getItem('theme') === 'dark' ||
+          (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        document.getElementById('theme-icon').textContent = '☀️';
+      }
+    } catch (e) {
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+        document.getElementById('theme-icon').textContent = '☀️';
+      }
+    }
+  </script>
+</body>
+</html>
